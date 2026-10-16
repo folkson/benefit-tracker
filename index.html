@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>权益与羊毛管理</title>
+  <!-- 零外部字体：图标为系统符号/emoji，正文走系统字体栈（大陆网络无需访问 Google Fonts） -->
+  <link rel="stylesheet" href="style.css?v=2.16.0" />
+</head>
+<body>
+  <div id="app">
+    <!-- Page content -->
+    <main id="page" class="page"></main>
+
+    <!-- Bottom tab bar (text-only, no icon font dependency) -->
+    <nav class="navbar" id="tabbar">
+      <button class="nav-item active" data-action="tab" data-tab="home" data-name="home">
+        <span class="nav-label">首页</span>
+      </button>
+      <button class="nav-item" data-action="tab" data-tab="voucher" data-name="vouchers">
+        <span class="nav-label">卡/票</span>
+      </button>
+      <button class="nav-item" data-action="tab" data-tab="credit" data-name="creditcards">
+        <span class="nav-label">信用卡</span>
+      </button>
+      <button class="nav-item" data-action="tab" data-tab="assets" data-name="assets">
+        <span class="nav-label">资产</span>
+      </button>
+      <button class="nav-item" data-action="tab" data-tab="knowledge" data-name="knowledge">
+        <span class="nav-label">知识库</span>
+      </button>
+      <button class="nav-item" data-action="tab" data-tab="profile" data-name="settings">
+        <span class="nav-label">我的</span>
+      </button>
+    </nav>
+
+    <!-- Floating back button (visible on sub-pages) -->
+    <button id="floatBack" data-action="back"><span class="ms">←</span></button>
+  </div>
+
+  <!-- Modal host -->
+  <div id="modalHost"></div>
+  <!-- Toast host -->
+  <div id="toastHost"></div>
+
+  <script src="app.js?v=2.16.0"></script>
+</body>
+</html>
