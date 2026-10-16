@@ -4,10 +4,12 @@
 
 **线上地址**：https://benefit-tracker.pages.dev （Cloudflare Pages，main 分支自动部署源为 `pages-dist/index.html` 单文件版）
 
+**作者**：[@folkson](https://github.com/folkson)
+
 ## 版本
 
 - **v2.16.0**（当前）：全站图标系统符号化——移除 Material Symbols 图标字体与 Inter 字体、删除 Google Fonts CDN 依赖，图标全部改为系统字体符号/emoji（⚙ ← ＋ ⋯ ✎ 🗑 › ✓ ▾ ▴ 📄 🎓 🛠️ 🧠 👥 等）。任何设备/网络环境（含大陆）零外部请求，显示 100% 可靠。单文件体积 514KB → 375KB。
-- v2.15.x：dock 纯文字化（移除底部导航图标）。
+- v2.15.84：dock 纯文字化（移除底部导航图标，导航项水平居中）。
 
 ## 目录结构
 

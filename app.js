@@ -237,8 +237,17 @@
   /* ============================================================
    *  Version & Changelog
    * ============================================================ */
-  const APP_VERSION = '2.15.83';
+  const APP_VERSION = '2.16.0';
   const CHANGELOG = [
+    { v: '2.16.0', date: '2026-10-16', tag: '界面', head: '全站图标系统符号化，彻底移除字体依赖', items: [
+      '38 种 Material Symbols 图标全部替换为系统符号/emoji（共 53 处使用位），任何设备无需加载图标字体即可正确显示',
+      '移除 Material Symbols 与 Inter 内联字体，删除 Google Fonts CDN 引用；正文改用系统字体栈（PingFang SC / 微软雅黑 / system-ui）',
+      '不再依赖任何外部字体请求，图标显示问题从源头根治；单文件体积 514KB → 375KB',
+    ]},
+    { v: '2.15.84', date: '2026-10-16', tag: '界面', head: '底部导航（dock）改为纯文字', items: [
+      '底部 dock 移除 6 个图标字体符号，仅保留文字，避免图标字体解码失败导致错乱',
+      '导航项改为水平居中布局，激活态增加内边距，各部分点按区域保持一致',
+    ]},
     { v: '2.15.83', date: '2026-08-28', tag: '体验', head: '列表只留「核销」，双击进详情页调总数', items: [
       '统一操作密度：卡券行、信用卡权益行默认只暴露一个「核销」按钮（点击即剩余次数 −1），不再堆「使用/回退」「总数±」等多按钮，列表恢复干净。',
       '卡券新增独立详情页：双击券行进入，可调整总数/已用（或储值卡充值/核销）、看到期与适用范围、编辑与删除；原「使用/回退」「消费/退款」双按钮已从列表移除。',
@@ -3856,7 +3865,7 @@
     const about = `
       <div class="cl-about">
         <div class="cl-about-name">权益与羊毛管理</div>
-        <div class="cl-about-meta">制作人：潘宇平 · 当前版本 v${APP_VERSION}</div>
+        <div class="cl-about-meta">作者：<a class="cl-about-link" href="https://github.com/folkson" target="_blank" rel="noopener noreferrer">GitHub @folkson</a> · 当前版本 v${APP_VERSION}</div>
       </div>`;
     openSheet('关于版本', `${about}<div class="cl-list">${rows}</div>`);
   }
